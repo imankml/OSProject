@@ -228,21 +228,30 @@ docker run -itd --net rednet --name c2 busybox sh
 
 1. Describe what is busybox and what is command switch **--name** is for? . ***(2 mark)*** 
 
-__BusyBox is a compact software suite that consolidates numerous standard UNIX utilities into a single, lightweight executable. It is widely utilized in containers due to its simplicity and low resource usage.
+__BusyBox is a compact software suite that consolidates numerous standard UNIX utilities into a single, lightweight executable. It is widely utilized in containers due to its simplicity and low resource usage.__
 
-The `--name` flag in the `docker run` command allows you to assign a specific name to a container, simplifying its identification and management.__.
+__The `--name` flag in the `docker run` command allows you to assign a specific name to a container, simplifying its identification and management.__
 
 2. Explore the network using the command ```docker network ls```, show the output of your terminal. ***(1 mark)*** __answer__.
 
 3. Using ```docker inspect c1``` and ```docker inspect c2``` inscpect the two network. What is the gateway of bluenet and rednet.? ***(1 mark)*** 
 
-__bluenet : 172.18.0.1__
-__rednet : 172.19.0.1__
+__bluenet: 172.18.0.1__
+
+__rednet: 172.19.0.1__
 
 4. What is the network address for the running container c1 and c2? ***(1 mark)*** 
 
-__Fill answer here__.
+__c1: 172.18.0.2__
+
+__c2: 172.19.0.2__
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
 5. Using the command ```docker exec c1 ping c2```, which basically tries to do a ping from container c1 to c2. Are you able to ping? Show your output . ***(1 mark)*** __Fill answer here__.
+![alt text](image-3.png)
 
 ## Bridging two SUB Networks
 1. Let's try this again by creating a network to bridge the two containers in the two subnetworks
@@ -254,8 +263,15 @@ docker exec c1 ping c2
 ```
 ***Questions:***
 
-1. Are you able to ping? Show your output . ***(1 mark)*** __Fill answer here__.
-2. What is different from the previous ping in the section above? ***(1 mark)*** __Fill answer here__.
+1. Are you able to ping? Show your output . ***(1 mark)***
+
+ __Yes__.
+ ![alt text](image-4.png)
+
+2. What is different from the previous ping in the section above? ***(1 mark)*** 
+__In the previous attempt, the operation failed because `c1` and `c2` were connected to different networks, `rednet` and `bluenet`, respectively. Due to this network isolation, the containers were unable to communicate with each other, resulting in a "bad address" error during the ping attempt.__
+
+__In this new attempt, both `c1` and `c2` are connected to the same network, `bridgenet`, which enables proper communication between them. By being on the same network, they can resolve each other’s addresses and exchange data seamlessly. Consequently, the ping command succeeds without any errors, confirming that the containers are now able to communicate as expected.__
 
 ## Intermediate Level (10 marks bonus)
 
