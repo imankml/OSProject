@@ -414,8 +414,13 @@ You have now set up a Node.js application in a Docker container on nodejsnet net
 
 ***Questions:***
 
-1. What is the output of step 5 above, explain the error? ***(1 mark)*** __Fill answer here__.
-2. Show the instruction needed to make this work. ***(1 mark)*** __Fill answer here__.
+1. What is the output of step 5 above, explain the error? ***(1 mark)*** 
+
+__The issue arises because the Node.js container and the MySQL container are on separate Docker networks, preventing them from communicating with each other.__
+
+2. Show the instruction needed to make this work. ***(1 mark)*** 
+
+__Fill answer here__.
 
 
 
