@@ -423,35 +423,35 @@ __The issue arises because the Node.js container and the MySQL container are on 
 __To connect both containers,__
 
 __1. We first need to create a bridge network. This can be done using the following command:__
-
+```
 @nanenmalik ➜ /workspaces/OSProject/nodejs-app (main) $ docker network create mybridge
-
+```
 __2. Next, connect both containers to the  the newly created network.__
-
+```
 @nanenmalik ➜ /workspaces/OSProject/nodejs-app (main) $ docker network connect mybridge mysql-container
 @nanenmalik ➜ /workspaces/OSProject/nodejs-app (main) $ docker network connect mybridge nodejs-container
-
+```
 At this point, the instructions in step 5 should have worked, but in my case, there is an authentication issue between the Node.js MySQL client and the MySQL server. The following steps outline how to resolve the issue:
 
 __To resolve the authentication issues between the Node.js MySQL client and the MySQL server__
 
  __1. First, update the authentication method for the MySQL user:__
-
+```
 @nanenmalik ➜ /workspaces/OSProject/nodejs-app (main) $ docker exec -it mysql-container mysql -uroot -p
 Enter password: 
-
+```
 When prompted, enter the root password.
 
 __2. After connecting to MySQL, execute the following commands:__
-
+```
 mysql> alter user 'myuser'@'%' identified with caching_sha2_password by 'mypassword';
 Query OK, 0 rows affected (0.01 sec)
 
 mysql> flush privileges;
 Query OK, 0 rows affected, 1 warning (0.00 sec)
-
+```
 __3. Because mysql2 has greater support for caching_sha2_password, we must upgrade the Node.js application to use it instead of mysql. Enter the following commands in the node.js-app directory:__
-
+```
 @nanenmalik ➜ /workspaces/OSProject/nodejs-app (main) $ npm uninstall mysql
 
 removed 12 packages, and audited 70 packages in 764ms
@@ -460,6 +460,7 @@ removed 12 packages, and audited 70 packages in 764ms
   run `npm fund` for details
 
 found 0 vulnerabilities
+
 @nanenmalik ➜ /workspaces/OSProject/nodejs-app (main) $ npm install mysql2
 
 added 12 packages, and audited 82 packages in 1s
@@ -468,9 +469,9 @@ added 12 packages, and audited 82 packages in 1s
   run `npm fund` for details
 
 found 0 vulnerabilities
-
+```
 __4. In the index.js file, modify the connection setup like this by using the command 'nano index.js':__
-
+```
 @nanenmalik ➜ /workspaces/OSProject/nodejs-app (main) $ nano index.js file
 
 Update the index.js file exactly as shown below:
@@ -514,9 +515,9 @@ app.get('/random', (req, res) => {
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
-
+```
 __5. Rebuild the Docker image for Node.js:__
-
+```
 @nanenmalik ➜ /workspaces/OSProject/nodejs-app (main) $ docker build -t nodejs-app .
 [+] Building 3.7s (11/11) FINISHED          docker:default
  => [internal] load build definition from Dockerfile  0.0s
@@ -536,21 +537,21 @@ __5. Rebuild the Docker image for Node.js:__
  => => exporting layers                               1.8s
  => => writing image sha256:f8a8887d01a2e0a3bd0610fe  0.0s
  => => naming to docker.io/library/nodejs-app         0.0s
-
+```
 __6. Launch a new Node.js container after stopping and removing the previous one:__
-
+```
 @nanenmalik ➜ /workspaces/OSProject/nodejs-app (main) $ docker stop nodejs-container
 nodejs-container
 @nanenmalik ➜ /workspaces/OSProject/nodejs-app (main) $ docker rm nodejs-container
 nodejs-container
 @nanenmalik ➜ /workspaces/OSProject/nodejs-app (main) $ docker run --name nodejs-container --network mybridge -p 3000:3000 -d nodejs-app
 a82e15e98d91cc2116784aa04f52064c2dd88bfbf3d4907c2b5f54b7f27b5f44
-
+```
 __7. Verify the connection__
-
+```
 @nanenmalik ➜ /workspaces/OSProject/nodejs-app (main) $ curl http://localhost:3000/random
 {"id":1,"name":"example1","value":"value1"}
-
+```
 __Finally, the node.js application can be accessed.__
 
 ## What to submit
