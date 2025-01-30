@@ -5,7 +5,7 @@ Group Name: __Awan Nano__.
 Section: __Section 7__. 
 
 Team Mates:
-1. __Fill name__ and __matric no__
+1. __NUR AMIRA NABILA BINTI MOHD AB RAHMAN__ and __2220682__
 2. __Fill name__ and __matric no__
 3. __NURUL NASREEN BINTI ABDUL MALIK__ and __2217464__
 
