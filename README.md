@@ -60,8 +60,10 @@ Team Mates:
 1. What is default OS used to run the virtual environment for codespaces. ***(1 mark)*** 
     __Ubuntu Linux.__.
 2. What are the two options of ram, disk and vcpu configuration you can have in running codespaces . ***(1 mark)*** 
+  ```
   __1. CPU 2-CORE: RAM = 8GB DISK = 32GB.__
   __2. CPU 4-CORE: RAM = 16GB DISK = 32GB.__
+  ```
   <img src="./image_6.png" width="70%">
 
 3. Why must we commit and sync our current work on source control? ***(1 mark)*** 
@@ -449,20 +451,39 @@ Linux codespaces-4814e5 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33
 ```
 
 11. What is the available free memory in the system. ***(1 mark)*** 
+ ``` 
+  __6.1GiB__.
+```
 
+12. What is the available disk space mounted on /workspace. ***(1 mark)***
+ ```
+ __20G/20770944 KB__.
+ ```
 
-12. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
+13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** 
+```
+__Linux codespaces-4814e5 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux__.
+```
 
-13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Fill answer here__.
+14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** 
+```
+__ls lists only filenames, while ls -asl shows all files (including hidden ones), their sizes, and detailed information.__.
+```
 
-14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** __Fill answer here__.
+15. What is the TLB size of the Virtual CPU. ***(1 mark)*** 
+```
+__2560 4K pages__.
+```
 
-15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
+16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** 
+```
+__3242 MHz__.
+```
 
-16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
-
-17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __Fill answer here__.
-
+17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** 
+```
+__top - 17:22:17 up 6 min,  0 users,  load average: 0.26, 1.47, 0.91__.
+```
 
 ## Running your own container instance.
 
