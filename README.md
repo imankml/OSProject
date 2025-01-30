@@ -59,9 +59,13 @@ Team Mates:
 
 1. What is default OS used to run the virtual environment for codespaces. ***(1 mark)*** 
     __Ubuntu Linux.__.
-2. What are the two options of ram, disk and vcpu configuration you can have in running codespaces . ***(1 mark)*** __Fill answer here__.
+2. What are the two options of ram, disk and vcpu configuration you can have in running codespaces . ***(1 mark)*** 
+  __1. CPU 2-CORE: RAM = 8GB DISK = 32GB.__
+  __2. CPU 4-CORE: RAM = 16GB DISK = 32GB.__
+  <img src="./image_6.png" width="70%">
 
-3. Why must we commit and sync our current work on source control? ***(1 mark)*** __Fill answer here__.
+3. Why must we commit and sync our current work on source control? ***(1 mark)*** 
+  __To save changes to the local repository, fetch and merge updates from the remote repository to synchronize with local modifications, and then push the changes back to the remote repository.__
 
 ## Exploring the Terminal
 
@@ -78,23 +82,282 @@ codespace
 
 Look at the TERMINAL tab. Run the following commands and provide the output here. 
 
-1. Run the command **pwd** . ***(1 mark)*** __Fill answer here__.
-2. Run the command **cat /etc/passwd** . ***(1 mark)*** __Fill answer here__.
-3. Run the command **df** . ***(1 mark)*** __Fill answer here__.
-4. Run the command **du** . ***(1 mark)*** __Fill answer here__.
-5. Run the command **ls** . ***(1 mark)*** __Fill answer here__.
+1. Run the command **pwd** . ***(1 mark)*** 
+__@MiraNabilaRahman ➜ /workspaces/OSProject (main) $ pwd/workspaces/OSProject__.
+2. Run the command **cat /etc/passwd** . ***(1 mark)*** 
+__
+@MiraNabilaRahman ➜ /workspaces/OSProject (main) $ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:101:101:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+systemd-network:x:102:103:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:103:104:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:104:105::/nonexistent:/usr/sbin/nologin
+codespace:x:1000:1000::/home/codespace:/bin/bash
+sshd:x:105:65534::/run/sshd:/usr/sbin/nologin__
+
+3. Run the command **df** . ***(1 mark)*** 
+__
+@MiraNabilaRahman ➜ /workspaces/OSProject (main) $ df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+overlay         32847680 10714720  20438860  35% /
+tmpfs              65536        0     65536   0% /dev
+shm                65536        0     65536   0% /dev/shm
+/dev/root       30298176 13280992  17000800  44% /vscode
+/dev/sdb1       46127956 18762772  24989608  43% /tmp
+/dev/loop4      32847680 10714720  20438860  35% /workspaces
+__
+
+4. Run the command **du** . ***(1 mark)*** 
+__
+@MiraNabilaRahman ➜ /workspaces/OSProject (main) $ du
+8       ./.git/refs/heads
+4       ./.git/refs/tags
+8       ./.git/refs/remotes/origin
+12      ./.git/refs/remotes
+28      ./.git/refs
+68      ./.git/hooks
+8       ./.git/info
+4       ./.git/lfs/tmp
+8       ./.git/lfs
+4       ./.git/branches
+4       ./.git/objects/info
+3468    ./.git/objects/pack
+3476    ./.git/objects
+8       ./.git/logs/refs/heads
+8       ./.git/logs/refs/remotes/origin
+12      ./.git/logs/refs/remotes
+24      ./.git/logs/refs
+32      ./.git/logs
+3756    ./.git
+28      ./nodejs-app/node_modules/content-type
+12      ./nodejs-app/node_modules/sqlstring/lib
+40      ./nodejs-app/node_modules/sqlstring
+28      ./nodejs-app/node_modules/mysql2/typings/mysql/lib/constants
+12      ./nodejs-app/node_modules/mysql2/typings/mysql/lib/protocol/sequences/promise
+40      ./nodejs-app/node_modules/mysql2/typings/mysql/lib/protocol/sequences
+12      ./nodejs-app/node_modules/mysql2/typings/mysql/lib/protocol/packets/params
+44      ./nodejs-app/node_modules/mysql2/typings/mysql/lib/protocol/packets
+88      ./nodejs-app/node_modules/mysql2/typings/mysql/lib/protocol
+16      ./nodejs-app/node_modules/mysql2/typings/mysql/lib/parsers
+168     ./nodejs-app/node_modules/mysql2/typings/mysql/lib
+184     ./nodejs-app/node_modules/mysql2/typings/mysql
+188     ./nodejs-app/node_modules/mysql2/typings
+236     ./nodejs-app/node_modules/mysql2/lib/constants
+44      ./nodejs-app/node_modules/mysql2/lib/base
+28      ./nodejs-app/node_modules/mysql2/lib/auth_plugins
+32      ./nodejs-app/node_modules/mysql2/lib/promise
+140     ./nodejs-app/node_modules/mysql2/lib/packets
+28      ./nodejs-app/node_modules/mysql2/lib/parsers
+80      ./nodejs-app/node_modules/mysql2/lib/commands
+676     ./nodejs-app/node_modules/mysql2/lib
+12      ./nodejs-app/node_modules/mysql2/node_modules/iconv-lite/.idea/codeStyles
+8       ./nodejs-app/node_modules/mysql2/node_modules/iconv-lite/.idea/inspectionProfiles
+36      ./nodejs-app/node_modules/mysql2/node_modules/iconv-lite/.idea
+232     ./nodejs-app/node_modules/mysql2/node_modules/iconv-lite/encodings/tables
+360     ./nodejs-app/node_modules/mysql2/node_modules/iconv-lite/encodings
+8       ./nodejs-app/node_modules/mysql2/node_modules/iconv-lite/.github
+24      ./nodejs-app/node_modules/mysql2/node_modules/iconv-lite/lib
+456     ./nodejs-app/node_modules/mysql2/node_modules/iconv-lite
+460     ./nodejs-app/node_modules/mysql2/node_modules
+1364    ./nodejs-app/node_modules/mysql2
+28      ./nodejs-app/node_modules/statuses
+8       ./nodejs-app/node_modules/get-proto/test
+8       ./nodejs-app/node_modules/get-proto/.github
+72      ./nodejs-app/node_modules/get-proto
+8       ./nodejs-app/node_modules/depd/lib/browser
+12      ./nodejs-app/node_modules/depd/lib
+52      ./nodejs-app/node_modules/depd
+40      ./nodejs-app/node_modules/serve-static
+48      ./nodejs-app/node_modules/safe-buffer
+8       ./nodejs-app/node_modules/side-channel-list/test
+8       ./nodejs-app/node_modules/side-channel-list/.github
+64      ./nodejs-app/node_modules/side-channel-list
+20      ./nodejs-app/node_modules/encodeurl
+24      ./nodejs-app/node_modules/methods
+64      ./nodejs-app/node_modules/long/umd
+144     ./nodejs-app/node_modules/long
+20      ./nodejs-app/node_modules/array-flatten
+8       ./nodejs-app/node_modules/hasown/.github
+48      ./nodejs-app/node_modules/hasown
+8       ./nodejs-app/node_modules/side-channel-map/test
+8       ./nodejs-app/node_modules/side-channel-map/.github
+60      ./nodejs-app/node_modules/side-channel-map
+32      ./nodejs-app/node_modules/proxy-addr
+24      ./nodejs-app/node_modules/cookie-signature
+148     ./nodejs-app/node_modules/lru-cache
+12      ./nodejs-app/node_modules/mime/src
+80      ./nodejs-app/node_modules/mime
+24      ./nodejs-app/node_modules/vary
+16      ./nodejs-app/node_modules/dunder-proto/test
+8       ./nodejs-app/node_modules/dunder-proto/.github
+72      ./nodejs-app/node_modules/dunder-proto
+8       ./nodejs-app/node_modules/call-bind-apply-helpers/test
+8       ./nodejs-app/node_modules/call-bind-apply-helpers/.github
+96      ./nodejs-app/node_modules/call-bind-apply-helpers
+28      ./nodejs-app/node_modules/media-typer
+32      ./nodejs-app/node_modules/generate-function
+24      ./nodejs-app/node_modules/forwarded
+8       ./nodejs-app/node_modules/es-object-atoms/test
+8       ./nodejs-app/node_modules/es-object-atoms/.github
+76      ./nodejs-app/node_modules/es-object-atoms
+28      ./nodejs-app/node_modules/body-parser/lib/types
+40      ./nodejs-app/node_modules/body-parser/lib
+100     ./nodejs-app/node_modules/body-parser
+232     ./nodejs-app/node_modules/iconv-lite/encodings/tables
+348     ./nodejs-app/node_modules/iconv-lite/encodings
+36      ./nodejs-app/node_modules/iconv-lite/lib
+412     ./nodejs-app/node_modules/iconv-lite
+36      ./nodejs-app/node_modules/content-disposition
+4       ./nodejs-app/node_modules/.bin
+24      ./nodejs-app/node_modules/destroy
+20      ./nodejs-app/node_modules/escape-html
+44      ./nodejs-app/node_modules/raw-body
+32      ./nodejs-app/node_modules/express/lib/router
+12      ./nodejs-app/node_modules/express/lib/middleware
+128     ./nodejs-app/node_modules/express/lib
+272     ./nodejs-app/node_modules/express
+20      ./nodejs-app/node_modules/object-inspect/example
+8       ./nodejs-app/node_modules/object-inspect/test/browser
+96      ./nodejs-app/node_modules/object-inspect/test
+8       ./nodejs-app/node_modules/object-inspect/.github
+216     ./nodejs-app/node_modules/object-inspect
+8       ./nodejs-app/node_modules/call-bound/test
+8       ./nodejs-app/node_modules/call-bound/.github
+56      ./nodejs-app/node_modules/call-bound
+32      ./nodejs-app/node_modules/http-errors
+12      ./nodejs-app/node_modules/aws-ssl-profiles/lib/@types
+232     ./nodejs-app/node_modules/aws-ssl-profiles/lib/profiles/ca
+236     ./nodejs-app/node_modules/aws-ssl-profiles/lib/profiles
+260     ./nodejs-app/node_modules/aws-ssl-profiles/lib
+276     ./nodejs-app/node_modules/aws-ssl-profiles
+32      ./nodejs-app/node_modules/mime-types
+24      ./nodejs-app/node_modules/inherits
+8       ./nodejs-app/node_modules/setprototypeof/test
+32      ./nodejs-app/node_modules/setprototypeof
+16      ./nodejs-app/node_modules/get-intrinsic/test
+8       ./nodejs-app/node_modules/get-intrinsic/.github
+80      ./nodejs-app/node_modules/get-intrinsic
+24      ./nodejs-app/node_modules/send/node_modules/encodeurl
+20      ./nodejs-app/node_modules/send/node_modules/ms
+48      ./nodejs-app/node_modules/send/node_modules
+116     ./nodejs-app/node_modules/send
+28      ./nodejs-app/node_modules/ipaddr.js/lib
+64      ./nodejs-app/node_modules/ipaddr.js
+28      ./nodejs-app/node_modules/math-intrinsics/constants
+12      ./nodejs-app/node_modules/math-intrinsics/test
+8       ./nodejs-app/node_modules/math-intrinsics/.github
+172     ./nodejs-app/node_modules/math-intrinsics
+24      ./nodejs-app/node_modules/fresh
+24      ./nodejs-app/node_modules/merge-descriptors
+52      ./nodejs-app/node_modules/qs/dist
+120     ./nodejs-app/node_modules/qs/test
+8       ./nodejs-app/node_modules/qs/.github
+44      ./nodejs-app/node_modules/qs/lib
+304     ./nodejs-app/node_modules/qs
+8       ./nodejs-app/node_modules/side-channel/test
+8       ./nodejs-app/node_modules/side-channel/.github
+68      ./nodejs-app/node_modules/side-channel
+8       ./nodejs-app/node_modules/lru.min/browser
+28      ./nodejs-app/node_modules/lru.min/lib
+60      ./nodejs-app/node_modules/lru.min
+36      ./nodejs-app/node_modules/accepts
+220     ./nodejs-app/node_modules/mime-db
+36      ./nodejs-app/node_modules/type-is
+32      ./nodejs-app/node_modules/on-finished
+20      ./nodejs-app/node_modules/ms
+32      ./nodejs-app/node_modules/is-property
+24      ./nodejs-app/node_modules/unpipe
+40      ./nodejs-app/node_modules/finalhandler
+24      ./nodejs-app/node_modules/toidentifier
+20      ./nodejs-app/node_modules/path-to-regexp
+64      ./nodejs-app/node_modules/safer-buffer
+48      ./nodejs-app/node_modules/denque
+8       ./nodejs-app/node_modules/side-channel-weakmap/test
+8       ./nodejs-app/node_modules/side-channel-weakmap/.github
+60      ./nodejs-app/node_modules/side-channel-weakmap
+12      ./nodejs-app/node_modules/has-symbols/test/shams
+24      ./nodejs-app/node_modules/has-symbols/test
+8       ./nodejs-app/node_modules/has-symbols/.github
+88      ./nodejs-app/node_modules/has-symbols
+24      ./nodejs-app/node_modules/negotiator/lib
+52      ./nodejs-app/node_modules/negotiator
+28      ./nodejs-app/node_modules/bytes
+36      ./nodejs-app/node_modules/debug/src
+112     ./nodejs-app/node_modules/debug
+28      ./nodejs-app/node_modules/etag
+20      ./nodejs-app/node_modules/function-bind/test
+12      ./nodejs-app/node_modules/function-bind/.github
+80      ./nodejs-app/node_modules/function-bind
+24      ./nodejs-app/node_modules/parseurl
+20      ./nodejs-app/node_modules/ee-first
+12      ./nodejs-app/node_modules/seq-queue/test
+12      ./nodejs-app/node_modules/seq-queue/lib
+60      ./nodejs-app/node_modules/seq-queue
+24      ./nodejs-app/node_modules/utils-merge
+8       ./nodejs-app/node_modules/es-define-property/test
+8       ./nodejs-app/node_modules/es-define-property/.github
+56      ./nodejs-app/node_modules/es-define-property
+8       ./nodejs-app/node_modules/gopd/test
+8       ./nodejs-app/node_modules/gopd/.github
+60      ./nodejs-app/node_modules/gopd
+24      ./nodejs-app/node_modules/named-placeholders
+36      ./nodejs-app/node_modules/cookie
+8       ./nodejs-app/node_modules/es-errors/test
+8       ./nodejs-app/node_modules/es-errors/.github
+100     ./nodejs-app/node_modules/es-errors
+24      ./nodejs-app/node_modules/range-parser
+6692    ./nodejs-app/node_modules
+6744    ./nodejs-app
+1972    ./images
+12788   .
+__.
+
+5. Run the command **ls** . ***(1 mark)*** 
+__@MiraNabilaRahman ➜ /workspaces/OSProject (main) $ ls__
+__README.md  image-1.png  image-2.png  image-3.png  image-4.png  image-5.png  image.png  image_6.png  images  nodejs-app__.
+
 6. Run the command **ls -asl** . ***(1 mark)*** __Fill answer here__.
+
 7. Run the command **free -h** . ***(1 mark)*** __Fill answer here__.
+
 8. Run the command **cat /proc/cpuinfo** . ***(1 mark)*** __Fill answer here__.
+
 9. Run the command **top** and type **q** to quit. ***(1 mark)*** __Fill answer here__.
+
 10. Run the command **uname -a**. ***(1 mark)*** __Fill answer here__.
+
 11. What is the available free memory in the system. ***(1 mark)*** __Fill answer here__.
+
 12. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
+
 13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Fill answer here__.
+
 14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** __Fill answer here__.
+
 15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
+
 16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
+
 17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __Fill answer here__.
+
 
 ## Running your own container instance.
 
