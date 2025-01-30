@@ -83,9 +83,12 @@ codespace
 Look at the TERMINAL tab. Run the following commands and provide the output here. 
 
 1. Run the command **pwd** . ***(1 mark)*** 
-__@MiraNabilaRahman ➜ /workspaces/OSProject (main) $ pwd/workspaces/OSProject__.
+```bash
+@MiraNabilaRahman ➜ /workspaces/OSProject (main) $ pwd/workspaces/OSProject
+```
+
 2. Run the command **cat /etc/passwd** . ***(1 mark)*** 
-__
+```bash
 @MiraNabilaRahman ➜ /workspaces/OSProject (main) $ cat /etc/passwd
 root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
@@ -111,10 +114,11 @@ systemd-network:x:102:103:systemd Network Management,,,:/run/systemd:/usr/sbin/n
 systemd-resolve:x:103:104:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
 messagebus:x:104:105::/nonexistent:/usr/sbin/nologin
 codespace:x:1000:1000::/home/codespace:/bin/bash
-sshd:x:105:65534::/run/sshd:/usr/sbin/nologin__
+sshd:x:105:65534::/run/sshd:/usr/sbin/nologin
+```
 
 3. Run the command **df** . ***(1 mark)*** 
-__
+```bash
 @MiraNabilaRahman ➜ /workspaces/OSProject (main) $ df
 Filesystem     1K-blocks     Used Available Use% Mounted on
 overlay         32847680 10714720  20438860  35% /
@@ -123,10 +127,10 @@ shm                65536        0     65536   0% /dev/shm
 /dev/root       30298176 13280992  17000800  44% /vscode
 /dev/sdb1       46127956 18762772  24989608  43% /tmp
 /dev/loop4      32847680 10714720  20438860  35% /workspaces
-__
+```
 
 4. Run the command **du** . ***(1 mark)*** 
-__
+```bash
 @MiraNabilaRahman ➜ /workspaces/OSProject (main) $ du
 8       ./.git/refs/heads
 4       ./.git/refs/tags
@@ -328,16 +332,17 @@ __
 6744    ./nodejs-app
 1972    ./images
 12788   .
-__.
+```
 
 5. Run the command **ls** . ***(1 mark)*** 
 ```bash
-__@MiraNabilaRahman ➜ /workspaces/OSProject (main) $ ls__
-__README.md  image-1.png  image-2.png  image-3.png  image-4.png  image-5.png  image.png  image_6.png  images  nodejs-app__.
+@MiraNabilaRahman ➜ /workspaces/OSProject (main) $ ls
+README.md  image-1.png  image-2.png  image-3.png  image-4.png  image-5.png  image.png  image_6.png  images  nodejs-app
 ```
 
 6. Run the command **ls -asl** . ***(1 mark)*** 
-__@MiraNabilaRahman ➜ /workspaces/OSProject (main) $ ls -asl
+```bash
+@MiraNabilaRahman ➜ /workspaces/OSProject (main) $ ls -asl
 total 340
   4 drwxrwxrwx+ 5 codespace root        4096 Jan 30 05:23 .
   4 drwxr-xrwx+ 5 codespace root        4096 Jan 30 03:07 ..
@@ -352,17 +357,99 @@ total 340
  16 -rw-rw-rw-  1 codespace codespace  14987 Jan 30 05:23 image_6.png
   4 drwxrwxrwx+ 2 codespace root        4096 Jan 30 03:07 images
   4 drwxrwxrwx+ 3 codespace root        4096 Jan 30 03:07 nodejs-app
-__.
+```
 
-7. Run the command **free -h** . ***(1 mark)*** __Fill answer here__.
+7. Run the command **free -h** . ***(1 mark)*** 
+```bash
+@MiraNabilaRahman ➜ /workspaces/OSProject (main) $ free -h
+              total        used        free      shared  buff/cache   available
+Mem:          7.7Gi       1.3Gi       205Mi        59Mi       6.2Gi       6.1Gi
+Swap:            0B          0B          0B
+```
 
-8. Run the command **cat /proc/cpuinfo** . ***(1 mark)*** __Fill answer here__.
+8. Run the command **cat /proc/cpuinfo** . ***(1 mark)*** 
+```bash
+@MiraNabilaRahman ➜ /workspaces/OSProject (main) $ cat /proc/cpuinfo
+processor       : 0
+vendor_id       : AuthenticAMD
+cpu family      : 25
+model           : 1
+model name      : AMD EPYC 7763 64-Core Processor
+stepping        : 1
+microcode       : 0xffffffff
+cpu MHz         : 3243.423
+cache size      : 512 KB
+physical id     : 0
+siblings        : 2
+core id         : 0
+cpu cores       : 1
+apicid          : 0
+initial apicid  : 0
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 13
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext invpcid_single vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm
+bugs            : sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips        : 4890.85
+TLB size        : 2560 4K pages
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 48 bits physical, 48 bits virtual
+power management:
 
-9. Run the command **top** and type **q** to quit. ***(1 mark)*** __Fill answer here__.
+processor       : 1
+vendor_id       : AuthenticAMD
+cpu family      : 25
+model           : 1
+model name      : AMD EPYC 7763 64-Core Processor
+stepping        : 1
+microcode       : 0xffffffff
+cpu MHz         : 3243.510
+cache size      : 512 KB
+physical id     : 0
+siblings        : 2
+core id         : 0
+cpu cores       : 1
+apicid          : 1
+initial apicid  : 1
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 13
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext invpcid_single vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm
+bugs            : sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips        : 4890.85
+TLB size        : 2560 4K pages
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 48 bits physical, 48 bits virtual
+power management:
+```
 
-10. Run the command **uname -a**. ***(1 mark)*** __Fill answer here__.
+9. Run the command **top** and type **q** to quit. ***(1 mark)*** 
+```bash
+top - 17:22:17 up 6 min,  0 users,  load average: 0.26, 1.47, 0.91
+Tasks:  17 total,   1 running,  16 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  3.2 us,  3.2 sy,  0.0 ni, 93.6 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   7929.6 total,    237.2 free,   1282.9 used,   6409.4 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6272.0 avail Mem 
 
-11. What is the available free memory in the system. ***(1 mark)*** __Fill answer here__.
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                                                  
+    627 codespa+  20   0   41.5g 327580  50944 S   1.3   4.0   0:16.15 node                                                                                     
+      1 codespa+  20   0    1136    640    640 S   0.0   0.0   0:00.02 docker-init                                                                              
+      7 codespa+  20   0    7236   1792   1792 S   0.0   0.0   0:00.01 sleep                                                                                    
+     35 root      20   0   12196   3480   2560 S   0.0   0.0   0:00.00 sshd 
+```
+
+10. Run the command **uname -a**. ***(1 mark)*** 
+```bash
+@MiraNabilaRahman ➜ /workspaces/OSProject (main) $ uname -a
+Linux codespaces-4814e5 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+```
+
+11. What is the available free memory in the system. ***(1 mark)*** 
+
 
 12. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
 
