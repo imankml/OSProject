@@ -331,10 +331,28 @@ __
 __.
 
 5. Run the command **ls** . ***(1 mark)*** 
+```bash
 __@MiraNabilaRahman ➜ /workspaces/OSProject (main) $ ls__
 __README.md  image-1.png  image-2.png  image-3.png  image-4.png  image-5.png  image.png  image_6.png  images  nodejs-app__.
+```
 
-6. Run the command **ls -asl** . ***(1 mark)*** __Fill answer here__.
+6. Run the command **ls -asl** . ***(1 mark)*** 
+__@MiraNabilaRahman ➜ /workspaces/OSProject (main) $ ls -asl
+total 340
+  4 drwxrwxrwx+ 5 codespace root        4096 Jan 30 05:23 .
+  4 drwxr-xrwx+ 5 codespace root        4096 Jan 30 03:07 ..
+  4 drwxrwxrwx+ 9 codespace root        4096 Jan 30 14:47 .git
+ 36 -rw-rw-rw-  1 codespace root       36154 Jan 30 14:38 README.md
+ 44 -rw-rw-rw-  1 codespace root       41576 Jan 30 03:07 image-1.png
+ 44 -rw-rw-rw-  1 codespace root       41030 Jan 30 03:07 image-2.png
+ 12 -rw-rw-rw-  1 codespace root       11290 Jan 30 03:07 image-3.png
+108 -rw-rw-rw-  1 codespace root      109814 Jan 30 03:07 image-4.png
+ 40 -rw-rw-rw-  1 codespace root       40828 Jan 30 03:07 image-5.png
+ 20 -rw-rw-rw-  1 codespace root       16599 Jan 30 03:07 image.png
+ 16 -rw-rw-rw-  1 codespace codespace  14987 Jan 30 05:23 image_6.png
+  4 drwxrwxrwx+ 2 codespace root        4096 Jan 30 03:07 images
+  4 drwxrwxrwx+ 3 codespace root        4096 Jan 30 03:07 nodejs-app
+__.
 
 7. Run the command **free -h** . ***(1 mark)*** __Fill answer here__.
 
