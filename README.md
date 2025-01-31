@@ -608,9 +608,8 @@ The group (root) has read and execute permissions.
 Others also have read and execute permissions.
 The folder is owned by the user "root" and the group "root".__
  <img src="./answer1.png" width="70%">
-2. What port is the apache web server running. ***(1 mark)*** __Port : 80__
+2. What port is the apache web server running. ***(1 mark)***
 3. What port is open for http protocol on the host machine? ***(1 mark)***  
- __PORT 9090__
  <img src="./answer2.png" width="70%">
 
 
