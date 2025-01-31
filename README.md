@@ -6,7 +6,7 @@ Section: __Section 7__.
 
 Team Mates:
 1. __NUR AMIRA NABILA BINTI MOHD AB RAHMAN__ and __2220682__
-2. __Fill name__ and __matric no__
+2. __NURUL IMAN BINTI MD KAMAL__ and __2228908__
 3. __NURUL NASREEN BINTI ABDUL MALIK__ and __2217464__
 
 ## Rules
@@ -594,7 +594,6 @@ docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ 
 
  <img src="./images/websitelink.png" width="70%">
 
-
 5. You can also see the Port in the **PORTS** tab, next to the terminal tab.
 
 6. You can then access your website by adding an index.html towards the end of your url link, like the one below. 
@@ -603,9 +602,15 @@ docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ 
 
 ***Questions:***
 
-1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . ***(2 mark)*** __Fill answer here__.
-2. What port is the apache web server running. ***(1 mark)*** __Fill answer here__.
-3. What port is open for http protocol on the host machine? ***(1 mark)*** __Fill answer here__.
+1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . ***(2 mark)*** __The owner (root) has read, write, and execute permissions.
+The group (root) has read and execute permissions.
+Others also have read and execute permissions.
+The folder is owned by the user "root" and the group "root".__.
+ <img src="./images/answer1.png" width="70%">
+3. What port is the apache web server running. ***(1 mark)*** __Port : 80__.
+4. What port is open for http protocol on the host machine? ***(1 mark)*** __PORT 9090__.
+ <img src="./images/answer2.png" width="70%">
+
 
 ## Create SUB Networks
 
