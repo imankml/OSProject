@@ -606,10 +606,10 @@ docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ 
 The group (root) has read and execute permissions.
 Others also have read and execute permissions.
 The folder is owned by the user "root" and the group "root".__.
- <img src="./images/answer1.png" width="70%">
-3. What port is the apache web server running. ***(1 mark)*** __Port : 80__.
-4. What port is open for http protocol on the host machine? ***(1 mark)*** __PORT 9090__.
- <img src="./images/answer2.png" width="70%">
+ <img src="./answer1.png" width="70%">
+3. What port is the apache web server running. ***(1 mark)***  __Port : 80__
+4. What port is open for http protocol on the host machine? ***(1 mark)***   __PORT 9090__
+ <img src="./answer2.png" width="70%">
 
 
 ## Create SUB Networks
