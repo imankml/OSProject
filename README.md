@@ -570,14 +570,35 @@ At the terminal, create a new directory called **myroot**, and run a instance of
 
 ***Questions:***
 
-1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** __Fill answer here__.
+1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** __1.User:root 2.Group:root__.
+```bash 
+PS C:\OSProject\webpage> docker start -ai debian-container
+root@05278e5c4250:/# chown codespace:codespace /root/testfile.txt
+root@05278e5c4250:/# ls -l /root
+total 0
+-rw-r--r-- 1 root root 28 Jan 31 08:07 testfile.txt
+root@05278e5c4250:/# exit
+exit
+```
 2. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. ***(2 mark)***
 ```bash
-//use sudo and chown
-sudo chown -R codespace:codespace myroot
+PS C:\OSProject\webpage> Get-Acl C:\OSProject\myroot\testfile.txt | Format-List
+
+
+Path   : Microsoft.PowerShell.Core\FileSystem::C:\OSProject\myroot\testfile.txt
+Owner  : LAPTOP-8RNRBPB6\User
+Group  : LAPTOP-8RNRBPB6\None
+Access : BUILTIN\Administrators Allow  FullControl
+         NT AUTHORITY\SYSTEM Allow  FullControl
+         BUILTIN\Users Allow  ReadAndExecute, Synchronize
+         NT AUTHORITY\Authenticated Users Allow  Modify, Synchronize
+Audit  :
+Sddl   : O:S-1-5-21-3941423001-1653640073-2498128543-1001G:S-1-5-21-3941423001-1653640073
+         -2498128543-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1200a9;;;BU)(A;ID;0x1301bf;
+         ;;AU)
 
 ```
-*** __Fill answer here__.***
+*** __I changed the permission of files from root to my personal Windows user due to the codespace not being recognized.__.***
 
 ## You are on your own, create your own static webpage
 
@@ -608,8 +629,8 @@ The group (root) has read and execute permissions.
 Others also have read and execute permissions.
 The folder is owned by the user "root" and the group "root".__
  <img src="./answer1.png" width="70%">
-2. What port is the apache web server running. ***(1 mark)*** __Port:80__.
-3. What port is open for http protocol on the host machine? ***(1 mark)*** __Port:9090__. 
+2. What port is the apache web server running? . ***(1 mark)*** __Port:80__.
+3. What port is open for http protocol on the host machine? . ***(1 mark)*** __Port:9090__. 
  <img src="./answer2.png" width="70%">
 
 
